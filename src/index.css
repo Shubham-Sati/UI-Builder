@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Element wrapper min-height constraints for natural auto-height behavior */
+.element-wrapper[data-element-type="button"] {
+  min-height: 48px;
+}
+
+.element-wrapper[data-element-type="input"] {
+  min-height: 60px;
+}
+
+.element-wrapper[data-element-type="container"] {
+  min-height: 80px;
+}
+
+/* Hide scrollbar by default, show on hover for device card content */
+.device-card-content {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Show scrollbar on hover */
+.device-card-content:hover {
+  /* Show scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #F3F4F6;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: #9CA3AF;
+    border-radius: 3px;
+  }
+  
+  /* Show scrollbar for Firefox */
+  scrollbar-width: thin;
+}
